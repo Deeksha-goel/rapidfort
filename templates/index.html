@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word to PDF Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+      }
+      h1 {
+        color: #4a90e2;
+        margin-bottom: 20px;
+      }
+      form {
+        margin-top: 20px;
+      }
+      input[type="file"] {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+      }
+      button {
+        background: #4a90e2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #357abd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Convert Word to PDF</h1>
+      <p>Upload a Word document (.docx) to convert it into a PDF file.</p>
+      <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".docx" required />
+        <button type="submit">Upload & Convert</button>
+      </form>
+    </div>
+  </body>
+</html>

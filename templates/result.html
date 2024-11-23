@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversion Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+      }
+      h1 {
+        color: #4a90e2;
+        margin-bottom: 20px;
+      }
+      ul {
+        text-align: left;
+        margin: 20px auto;
+        padding: 0;
+        list-style-type: none;
+        font-size: 16px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a,
+      button {
+        text-decoration: none;
+        background: #4a90e2;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        cursor: pointer;
+        border: none;
+      }
+      a:hover,
+      button:hover {
+        background: #357abd;
+      }
+      button {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conversion Successful!</h1>
+      <h3>File Metadata:</h3>
+      <ul>
+        <li><strong>Word Count:</strong> {{ metadata["Word Count"] }}</li>
+        <li><strong>Paragraphs:</strong> {{ metadata["Paragraphs"] }}</li>
+      </ul>
+      <a href="/download/{{ pdf_path }}">Download PDF</a>
+      <button onclick="window.location.href='/'">
+        Upload Another Document
+      </button>
+    </div>
+  </body>
+</html>
